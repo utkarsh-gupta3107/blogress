@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Blogress</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpg" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"> -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+   <symbol id="twitter" viewBox="0 0 512 512">
+    <path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"></path>
+  </symbol>
+  <symbol id="codepen" viewBox="0 0 512 512">
+    <path d="M427 201.9c-0.6-4.2-2.9-8-6.4-10.3L264.2 87.3c-4.9-3.3-11.4-3.3-16.3 0L91.4 191.6c-4 2.7-6.5 7.4-6.5 12.2v104.3c0 4.8 2.5 9.6 6.5 12.2l156.4 104.3c4.9 3.3 11.4 3.3 16.3 0L420.6 320.4c4-2.6 6.6-7.4 6.6-12.2V203.9C427.1 203.2 427.1 202.6 427 201.9 427 201.7 427.1 202.6 427 201.9zM270.7 127.1l115.2 76.8 -51.5 34.4 -63.8-42.7V127.1zM241.3 127.1v68.6l-63.8 42.7 -51.5-34.4L241.3 127.1zM114.3 231.4l36.8 24.6 -36.8 24.6V231.4zM241.3 384.9L126.1 308.1l51.5-34.4 63.8 42.6V384.9zM256 290.8l-52-34.8 52-34.8 52 34.8L256 290.8zM270.7 384.9V316.3l63.8-42.6 51.5 34.4L270.7 384.9zM397.7 280.6l-36.8-24.6 36.8-24.6V280.6z"></path>
+  </symbol>
+  <symbol id="dribbble" viewBox="0 0 512 512">
+    <path d="M256 68.4C152.4 68.4 68.4 152.4 68.4 256c0 103.6 84 187.6 187.6 187.6S443.6 359.6 443.6 256C443.6 152.4 359.6 68.4 256 68.4zM410.6 247.3c-40.3-6.6-77.3-7-111-1.1 -3.8-8.8-7.8-17.6-12-26.3 36.1-15.6 65.1-36.9 86.7-63.8C395.4 181 408.6 212.6 410.6 247.3zM350.5 133.4c-18.8 24.3-44.8 43.5-78 57.5 -15.9-29.1-34-57.5-54.5-85 12.2-3.1 24.9-4.9 38-4.9C291.6 101 324.3 113.2 350.5 133.4zM186.1 117.9c20.8 27.2 39.3 55.3 55.3 84.1 -38 11.2-83.4 16.9-135.8 17.3C116.4 175 146.3 138.1 186.1 117.9zM101 256c0-1.3 0.2-2.7 0.2-4 60.2-0.1 112.1-7 155.6-20.7 3.6 7.4 7.1 14.9 10.5 22.4 -52.8 16.5-96.4 50.4-130.3 101.3C114.5 328.2 101 293.6 101 256zM160.9 378.1c30.8-48.3 70.1-79.7 118.8-94.2 14.5 37.8 25.2 76.8 31.9 116.6 -17.3 6.7-36 10.5-55.6 10.5C220.1 411 187.2 398.6 160.9 378.1zM342 384.8c-6.9-36.8-16.9-72.8-30-107.8 29.3-4.1 61.6-3.1 96.9 3.1C402.1 323.6 377.2 361.3 342 384.8z"></path>
+  </symbol>
+</svg>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="carousel.css">
+    <link rel="stylesheet" type="text/css" href="news.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="events.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="jobs.css">
+    <link rel="stylesheet" type="text/css" href="media.css">
+    
+
+    <!-- <link rel="stylesheet" type="text/css" href="endless.css"> -->
+    
+
+</head>
+<body>
+    <header>
+<div class="headcover">
+      
+      <img src="images/logo.jpg" />
+        <h1> 
+      Welcome! Work in Blog-ress</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+      
+                <div class="content__menu">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+                <circle class="crc-bg" cx="320" cy="320" r="100" fill="#fff"></circle>
+                <circle class="crc-arc" cx="320" cy="320" r="150" fill="none" visibility="hidden"
+                        stroke-width="200" stroke="#E81B59"
+                        stroke-dasharray="10, 350" stroke-dashoffset="-230"
+                ></circle>
+        
+                <a class="svg__link" xlink:href="#code1">
+                  <!-- <img src="images/fire-svgrepo-com.svg" /> -->
+                  <use class="link-cdpn" xlink:href="#codepen" width="50" height="50" x="300" y="300" fill="#21264b" ></use>
+                </a>
+                <a class="svg__link" xlink:href="#dribbble1">
+                  <use class="link-drbl" xlink:href="#dribbble" width="50" height="50" x="300" y="300" fill="#fff"></use>
+                </a>
+                <a class="svg__link" xlink:href="/">
+                  <use class="link-twtr" xlink:href="#twitter" width="50" height="50" x="300" y="300" fill="#21264b"></use>
+                </a>
+                <radialGradient id="grd">
+                  <stop offset="0" style="stop-color:rgba(0,0,0, 0)"> </stop>
+                  <stop offset="0.85" style="stop-color:rgba(0,0,0, 0.85)"> </stop>
+                  <stop offset="1" style="stop-color:rgba(0,0,0, 0)"> </stop>
+                </radialGradient>
+                <circle class="crc-sd" cx="320" cy="320" r="105" fill=url(#grd)></circle>
+                <circle class="crc-sm" cx="320" cy="320" r="100" fill="#fff"></circle>
+        
+                <g class="burger">
+                  <line class="brgr-top"
+                        stroke-width="5.5" stroke="#21264b" stroke-linecap="round"
+                        x1="270" y1="270"
+                        x2="296" y2="270"
+                  ></line>
+                  <line class="brgr-mid"
+                        stroke-width="5.5" stroke="#21264b" stroke-linecap="round"
+                        x1="270" y1="282"
+                        x2="296" y2="282"
+                  ></line>
+                  <line class="brgr-bot"
+                        stroke-width="5.5" stroke="#21264b" stroke-linecap="round"
+                        x1="270" y1="294"
+                        x2="296" y2="294"
+                  ></line>
+                </g>
+              </svg>
+             
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid-container">
+        <aside class="latest">
+            <h3>Latest News</h3>
+            <div class="cover">
+            <div class="news-list">
+              <a href="#" class="news-item">
+                <img src="images/19.jpg" alt="Image" class="news-image">
+                <div class="news-content">
+                  <h9 class="news-title">‘Fearless and composed’: Meet Bhavya</h9>
+                  <div class="news-details">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                    </svg>
+                    <span class="news-timestamp">1h ago| Shushma</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="news-item">
+                <img src="images/20.webp" alt="Image" class="news-image">
+                <div class="news-content">
+                  <h9 class="news-title">Amit Shah Jabs B Mann</h9>
+                  <div class="news-details">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                    </svg>
+                    <span class="news-timestamp">2h ago | Stephen</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="news-item">
+                <img src="images/21.avif" alt="Image" class="news-image">
+                <div class="news-content">
+                  <h9 class="news-title">54 Dead in UP's Ballia As Temperature Soars</h9>
+                  <div class="news-details">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                    </svg>
+                    <span class="news-timestamp">12h ago | Joey</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="news-item">
+                <img src="images/22.jpg" alt="Image" class="news-image">
+                <div class="news-content">
+                  <h9 class="news-title">Manipur Chief Minister asks Mizoram counterpart to protect Meiteis</h9>
+                  <div class="news-details">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                    </svg>
+                    <span class="news-timestamp">1h ago | Ainsworth</span>
+                  </div>
+                </div>
+              </a>
+             
+              <a href="#" class="news-item">
+                <img src="images/23.webp" alt="Image" class="news-image">
+                <div class="news-content">
+                  <h9 class="news-title">Net Direct Tax Collection Grows 11%</h9>
+                  <div class="news-details">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                    </svg>
+                    <span class="news-timestamp">1d | Stephen</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+            
+            
+        </aside>
+<!-- 
+        <div class="main-content">
+            <h9>Welcome to My Website</h9>
+            <p>This is the main content section.</p>
+             -->
+<div class="main-content">
+    <div class="carousel">
+      <div class="carousel__wrapper" >
+        <div class="carousel__header">
+          <h2 class="carousel__headline"><img src="images/twitter.png"/>
+            Twitter Trendy
+          </h2>
+          <div class="carousel__controls">
+            <button class="carousel__arrow disabled arrow-prev"></button>
+            <button class="carousel__arrow arrow-next"></button>
+          </div>
+          
+        </div>
+        <ul class="carousel__content">
+          <li class="carousel__item " id="first"> <a href="#"><img class="carousel__item__image" src="images/0.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">#IndianFootball
+                </h3><span class="carousel__subtitle">YOUR #BLUETIGERS</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/1.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">#AdipurushBlockbusterWeekend
+                </h3><span class="carousel__subtitle">your favourite scene from #Adipurush movie</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/2.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">#ThalapathyVIJAYBdayCDP
+                </h3><span class="carousel__subtitle">Common DP to Celebrate</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/3.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">गीता प्रेस
+                </h3><span class="carousel__subtitle">अद्भुत गीता प्रेस गोरखपुर</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/4.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">#MannKiBaat
+                </h3><span class="carousel__subtitle">Tune in at 11 AM today.</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#">
+              <div class="carousel__description"><img class="carousel__item__image" src="images/5.jpg" alt=""/>
+                <h3 class="carousel__title">#FathersDay
+                </h3><span class="carousel__subtitle">Happy Father's Day</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/6.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title" id="dribbble1">#ArijitSingh
+                </h3><span class="carousel__subtitle" >The singing sensation</span>
+              </div></a></li>
+        
+        </ul>
+      </div>
+      <div class="carousel__wrapper" >
+        <div class="carousel__header">
+          <h2 class="carousel__headline">
+            <img src="images/dribble.png"/>Sport Blogs are here!
+          </h2>
+          <div class="carousel__controls">
+            <button class="carousel__arrow arrow-prev"></button>
+            <button class="carousel__arrow arrow-next"></button>
+          </div>
+        </div>
+        <ul class="carousel__content">
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/7.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Canadian Grand Prix
+                </h3><span class="carousel__subtitle">Live Updates</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/8.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Conor Benn suicidal thoughts
+                </h3><span class="carousel__subtitle">after positive drugs tests</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/9.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Son of Ray Lewis died 
+                </h3><span class="carousel__subtitle">Suspected overdose</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/10.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Huggins resigns 
+                </h3><span class="carousel__subtitle">WVU coach in wake of arrest</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/11.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Mets activate Alonso  
+                </h3><span class="carousel__subtitle">IL ahead of schedule</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/12.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Longtime sixth man Williams retires
+                </h3><span class="carousel__subtitle">from NBA</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/13.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title" id="code1">Sainz gets three-place grid drop 
+                </h3><span class="carousel__subtitle">for impeding Gasly</span>
+              </div></a></li>
+        
+        </ul>
+      </div>
+      <div class="carousel__wrapper" >
+        <div class="carousel__header">
+          <h2 class="carousel__headline"><img src="images/codepen.png" />Code With Me blogs
+          </h2>
+          <div class="carousel__controls">
+            <button class="carousel__arrow disabled arrow-prev"></button>
+            <button class="carousel__arrow arrow-next"></button>
+          </div>
+        </div>
+        <ul class="carousel__content">
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/14.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Mental Models,
+                </h3><span class="carousel__subtitle">Programming Fictions, and Wittgenstein</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/15.webp" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Bridging the Gap: 
+                </h3><span class="carousel__subtitle">SMy Journey to Becoming a Data Analyst at 34</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/16.webp" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Prompt Engineering:
+                </h3><span class="carousel__subtitle"> The Future of AI-Driven Development</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/17.jpg" alt=""/>
+              <div class="carousel__description">
+                <h3 class="carousel__title">Part 1 With Memgraph
+                </h3><span class="carousel__subtitle">A Deep Dive Into Graph Analytics</span>
+              </div></a></li>
+          <li class="carousel__item"> <a href="#"><img class="carousel__item__image" src="images/18.webp" alt=""/>
+              <div class="carousel__description" id="jobs">
+                <h3 class="carousel__title">Everything Bad in Java 
+                </h3><span class="carousel__subtitle">is Good for You</span>
+              </div></a></li>
+          
+        
+        </ul>
+      </div>
+      <div class="carousel__wrapper">
+        <div class="carousel__header">
+          <h2 class="carousel__headline"><img src="images/job.png" />FIND JOBS ONLINE
+          </h2>
+         </div>
+         <div class="container">
+          <div class="row1">
+            <div class="col-md-10 offset-md-1">
+              <ul class="job-list">
+                <li class="job-preview">
+                  <div class="content float-left">
+                    <h4 class="job-title">
+                      Front-end Developer[Full Time]
+                    </h4>
+                    <h5 class="company">
+                      Cuttack, Odisha, India
+                    </h5>
+                  </div>
+                  <a href="#" class="btn btn-apply float-sm-right float-xs-left">
+                    Apply
+                  </a>
+                </li>
+                <li class="job-preview">
+                  <div class="content float-left">
+                    <h4 class="job-title">
+                      Radio RJ[Full Time]
+                    </h4>
+                    <h5 class="company">
+                      Bhubaneswar, Odisha, India
+                    </h5>
+                  </div>
+                  <a href="#" class="btn btn-apply float-sm-right float-xs-left">
+                    Apply
+                  </a>
+                </li>
+                <li class="job-preview">
+                  <div class="content float-left">
+                    <h4 class="job-title">
+                      Part-time Actor
+                    </h4>
+                    <h5 class="company">
+                      Kolkata, West Bengal, India
+                    </h5>
+                  </div>
+                  <a href="#" class="btn btn-apply float-sm-right float-xs-left">
+                    Apply
+                  </a>
+                </li>
+                <li class="job-preview">
+                  <div class="content float-left">
+                    <h4 class="job-title">
+                      Web Developer
+                    </h4>
+                    <h5 class="company">
+                      Los Angeles, CA
+                    </h5>
+                  </div>
+                  <a href="#" class="btn btn-apply float-sm-right float-xs-left">
+                    Apply
+                  </a>
+                </li>
+                <li class="job-preview">
+                  <div class="content float-left">
+                    <h4 class="job-title">
+                      Web Designer and Developer[Contract]
+                    </h4>
+                    <h5 class="company">
+                      Chennai, Tamil Nadu, India
+                    </h5>
+                  </div>
+                  <a href="#" class="btn btn-apply float-sm-right float-xs-left">
+                    Apply
+                  </a>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="what1" > 
+        <div class="latest1" >
+        <h3>Latest News</h3>
+        <div class="cover">
+        <div class="news-list">
+          <a href="#" class="news-item">
+            <img src="images/19.jpg" alt="Image" class="news-image">
+            <div class="news-content">
+              <h9 class="news-title">‘Fearless and composed’: Meet Bhavya</h9>
+              <div class="news-details">
+                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                </svg>
+                <span class="news-timestamp">1h ago| Shushma</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="news-item">
+            <img src="images/20.webp" alt="Image" class="news-image">
+            <div class="news-content">
+              <h9 class="news-title">Amit Shah Jabs B Mann</h9>
+              <div class="news-details">
+                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                </svg>
+                <span class="news-timestamp">2h ago | Stephen</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="news-item">
+            <img src="images/21.avif" alt="Image" class="news-image">
+            <div class="news-content">
+              <h9 class="news-title">54 Dead in UP's Ballia As Temperature Soars</h9>
+              <div class="news-details">
+                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                </svg>
+                <span class="news-timestamp">12h ago | Joey</span>
+              </div>
+            </div>
+          </a>    
+          <a href="#" class="news-item">
+            <img src="images/22.jpg" alt="Image" class="news-image">
+            <div class="news-content">
+              <h9 class="news-title">Manipur Chief Minister asks Mizoram counterpart to protect Meiteis</h9>
+              <div class="news-details">
+                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                </svg>
+                <span class="news-timestamp">1h ago | Ainsworth</span>
+              </div>
+            </div>
+          </a>   
+          <a href="#" class="news-item">
+            <img src="images/23.webp" alt="Image" class="news-image">
+            <div class="news-content">
+              <h9 class="news-title">Net Direct Tax Collection Grows 11%</h9>
+              <div class="news-details">
+                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="news-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                </svg>
+                <span class="news-timestamp">1d | Stephen</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+        
+        
+    </div>
+    <div class="schedule1">
+      <div class="task-manager">
+        <div class="right-bar">
+         <div class="header">New Events</div>
+          <div class="right-content">
+            
+            <div class="task-box blue">
+              <div class="description-task">
+                <div class="time">Online Seminar by TATA</div>
+                <div class="task-name">Today at 4:30PM</div>
+                <div class="more"><a href="#">Enroll now</a></div>
+                <!-- <div class="members">1.00+ enrolled</div> -->
+              </div>
+              </div>
+              <div class="task-box blue">
+              <div class="description-task">
+                <div class="time">Hands on session with Enkebee</div>
+                <div class="task-name"> 20/06/2023</div>
+                <div class="more"><a href="#">Enroll now</a></div>
+
+              </div>
+              </div>
+              <div class="task-box blue">
+              <div class="description-task">
+                <div class="time">101 Gaming Clash</div>
+                <div class="task-name">Coming Soon</div>
+                <div class="more"><a href="#">Enroll now</a></div>
+
+              </div>
+              </div>
+              <div class="task-box blue">
+                <div class="description-task">
+                  <div class="time">Semi-finale contest, hacking</div>
+                  <div class="task-name"> 24/06/2023</div>
+                  <div class="more"><a href="#">Enroll now</a></div>
+
+                </div>
+                </div>
+
+                <div class="task-box blue">
+                  <div class="description-task">
+                    <div class="time">Your Say matters Feedback time!</div>
+                    <div class="task-name">22/06/2023</div>
+                    <div class="more"><a href="#">Vote now</a></div>
+
+                  </div>
+                  </div>
+                  <div class="task-box blue">
+                    <div class="description-task">
+                      <div class="time">Chance to get featured</div>
+                      <div class="task-name"> 29/06/2023</div>
+                      <div class="more"><a href="#">Enroll now</a></div>
+  
+                    </div>
+                    </div>     
+                  </div>
+           
+          </div>
+        </div>
+    </div></div>
+     
+      <!-- <div class="carousel__wrapper"> -->
+        <!-- <div class="carousel__header">
+          <h9 class="carousel__headline"><img src="images/codepen.png" />FIND JOBS ONLINE
+          </h9>
+         </div> -->
+         <div class="footer" id="contact">
+          <footer class="footer-section">
+            <div class="container">
+                <div class="footer-cta pt-5 ">
+                   
+                </div>
+                <div class="footer-content pb-1">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="images/logo.jpg" class="img-fluid" alt="logo"></a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>Ignite your imagination through our captivating blogiverse. The work in blog-ress</p>
+                                </div>
+                                <div class="footer-social-icon">
+                                    <span>Follow us</span>
+                                    <ul class="social_icon">
+                                      <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                      <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                      <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                      <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="col-xl-6 col-lg-6 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Subscribe</h3>
+                                </div>
+                                <div class="footer-text mb-25">
+                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Email Address">
+                                        <button><i class="fab fa-telegram-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="copyright-area">
+                              <div class="container">
+                                  <div class="row">
+                                      <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                                          <div class="copyright-text">
+                                              <p>Copyright &copy; 2023, All Right Reserved <a href="#">Utkarsh Gupta</a></p>
+                                          </div>
+                                      </div>
+                                      <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                                          <div class="footer-menu">
+                                              <ul>
+                                                  <li><a href="#">Home</a></li>
+                                                  <li><a href="#">Privacy</a></li>
+                                                  <li><a href="#">Terms</a></li>
+                                                  <!-- <li><a href="#">Policy</a></li> -->
+                                                  <li><a href="#">Contact</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </footer>
+          <!-- <p>© 2023 My Website. All rights reserved.</p> -->
+      </div>
+      
+      <!-- </div> -->
+      
+    </div>
+  </div>
+        <!-- </div> -->
+        <!-- <div class="scrollbar" id="style-3"> -->
+        <aside class="schedule">
+          <div class="task-manager">
+            <div class="right-bar">
+             <div class="header">New Events</div>
+              <div class="right-content">
+                
+                <div class="task-box blue">
+                  <div class="description-task">
+                    <div class="time">Online Seminar by TATA</div>
+                    <div class="task-name">Today at 4:30PM</div>
+                    <div class="more"><a href="#">Enroll now</a></div>
+                    <!-- <div class="members">1.00+ enrolled</div> -->
+                  </div>
+                  </div>
+                  <div class="task-box blue">
+                  <div class="description-task">
+                    <div class="time">Hands on session with Enkebee</div>
+                    <div class="task-name"> 20/06/2023</div>
+                    <div class="more"><a href="#">Enroll now</a></div>
+
+                  </div>
+                  </div>
+                  <div class="task-box blue">
+                  <div class="description-task">
+                    <div class="time">101 Gaming Clash</div>
+                    <div class="task-name">Coming Soon</div>
+                    <div class="more"><a href="#">Enroll now</a></div>
+
+                  </div>
+                  </div>
+                  <div class="task-box blue">
+                    <div class="description-task">
+                      <div class="time">Semi-finale contest, hacking</div>
+                      <div class="task-name"> 24/06/2023</div>
+                      <div class="more"><a href="#">Enroll now</a></div>
+  
+                    </div>
+                    </div>
+
+                    <div class="task-box blue">
+                      <div class="description-task">
+                        <div class="time">Your Say matters Feedback time!</div>
+                        <div class="task-name">22/06/2023</div>
+                        <div class="more"><a href="#">Vote now</a></div>
+    
+                      </div>
+                      </div>
+                      <div class="task-box blue">
+                        <div class="description-task">
+                          <div class="time">Chance to get featured</div>
+                          <div class="task-name"> 29/06/2023</div>
+                          <div class="more"><a href="#">Enroll now</a></div>
+      
+                        </div>
+                        </div>
+                  
+                  
+
+                  
+                </div>
+               
+              </div>
+            </div>
+        </aside>
+        
+       
+     
+
+        <!-- <div class="footer">
+            <p>© 2023 My Website. All rights reserved.</p>
+        </div> -->
+    </section>
+    
+    <script src="carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+    <script src="news.js"></script>
+    <script src="nav.js"></script>
+    
+    <!-- <script src="endless.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+#carouselContainer {
+  height: 300px;
+  overflow: scroll;
+}
+
+#carousel {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel__item {
+  flex: 0 0 300px; /* adjust item width as needed */
+  margin-right: 10px; /* adjust item spacing as needed */
+}
